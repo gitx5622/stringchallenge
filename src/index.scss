@@ -1,0 +1,25 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  margin: 3em;
+  background: aliceblue;
+}
+
+.coding-challenge {
+  text-align: center;
+  .string-name {
+    border: 1px solid #eeebeb;
+    height: 2em;
+    width: 50%;
+  }
+  .custom-button {
+    margin: 3em;
+    background-color: aqua;
+    border: 1px solid #eeebeb;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 2.2em;
+  }
+}

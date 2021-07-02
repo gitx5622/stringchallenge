@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import removeAnyDuplicates from "./challenge";
+import "./index.scss";
 
-function App() {
+const App = () => {
+  const [string, setString] = useState("");
+
+  const handleOnChange = (e) => {
+    setString(e.target.value)
+  }
+  const result = removeAnyDuplicates(string)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="coding-challenge">
+        <h1>Verb Education Limited Coding Challenge</h1>
+        <h3>Enter your string with duplicates</h3>
+      <input
+          className="string-name"
+          value={string}
+          onChange={handleOnChange}
+          placeholder="Enter string name"
+      />
+        <br/>
+      <button className="custom-button">Your Answer down here</button>
+      <h1>Result: {result}</h1>
     </div>
   );
 }
-
 export default App;
